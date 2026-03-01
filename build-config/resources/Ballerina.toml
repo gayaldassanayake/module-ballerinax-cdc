@@ -138,3 +138,600 @@ groupId = "com.fasterxml.jackson.core"
 artifactId = "jackson-databind"
 version = "@fasterxml.version@"
 path = "./lib/jackson-databind-@fasterxml.version@.jar"
+
+# Azure Blob storage dependencies
+[[platform.java21.dependency]]
+groupId = "io.debezium"
+artifactId = "debezium-storage-azure-blob"
+version = "@debezium.version@"
+path = "./lib/debezium-storage-azure-blob-@debezium.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "com.azure"
+artifactId = "azure-storage-blob"
+version = "@azure.storage.blob.version@"
+path = "./lib/azure-storage-blob-@azure.storage.blob.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "com.azure"
+artifactId = "azure-storage-common"
+version = "@azure.storage.common.version@"
+path = "./lib/azure-storage-common-@azure.storage.common.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "com.azure"
+artifactId = "azure-storage-internal-avro"
+version = "@azure.storage.internal.avro.version@"
+path = "./lib/azure-storage-internal-avro-@azure.storage.internal.avro.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "com.azure"
+artifactId = "azure-core"
+version = "@azure.core.version@"
+path = "./lib/azure-core-@azure.core.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "com.azure"
+artifactId = "azure-core-http-netty"
+version = "@azure.core.http.netty.version@"
+path = "./lib/azure-core-http-netty-@azure.core.http.netty.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "com.fasterxml.jackson.dataformat"
+artifactId = "jackson-dataformat-xml"
+version = "@jackson.dataformat.xml.version@"
+path = "./lib/jackson-dataformat-xml-@jackson.dataformat.xml.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.projectreactor"
+artifactId = "reactor-core"
+version = "@reactor.core.version@"
+path = "./lib/reactor-core-@reactor.core.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.projectreactor.netty"
+artifactId = "reactor-netty-core"
+version = "@reactor.netty.version@"
+path = "./lib/reactor-netty-core-@reactor.netty.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.projectreactor.netty"
+artifactId = "reactor-netty-http"
+version = "@reactor.netty.version@"
+path = "./lib/reactor-netty-http-@reactor.netty.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.netty"
+artifactId = "netty-codec"
+version = "@azure.netty.version@"
+path = "./lib/netty-codec-@azure.netty.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.netty"
+artifactId = "netty-codec-http"
+version = "@azure.netty.version@"
+path = "./lib/netty-codec-http-@azure.netty.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.netty"
+artifactId = "netty-codec-http2"
+version = "@azure.netty.version@"
+path = "./lib/netty-codec-http2-@azure.netty.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.netty"
+artifactId = "netty-codec-socks"
+version = "@azure.netty.version@"
+path = "./lib/netty-codec-socks-@azure.netty.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.netty"
+artifactId = "netty-codec-dns"
+version = "@azure.netty.dns.version@"
+path = "./lib/netty-codec-dns-@azure.netty.dns.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.netty"
+artifactId = "netty-handler"
+version = "@azure.netty.version@"
+path = "./lib/netty-handler-@azure.netty.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.netty"
+artifactId = "netty-handler-proxy"
+version = "@azure.netty.version@"
+path = "./lib/netty-handler-proxy-@azure.netty.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.netty"
+artifactId = "netty-transport-native-unix-common"
+version = "@azure.netty.version@"
+path = "./lib/netty-transport-native-unix-common-@azure.netty.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.netty"
+artifactId = "netty-resolver-dns"
+version = "@azure.netty.dns.version@"
+path = "./lib/netty-resolver-dns-@azure.netty.dns.version@.jar"
+
+# Amazon S3 storage dependencies
+[[platform.java21.dependency]]
+groupId = "io.debezium"
+artifactId = "debezium-storage-s3"
+version = "@debezium.version@"
+path = "./lib/debezium-storage-s3-@debezium.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.awssdk"
+artifactId = "s3"
+version = "@aws.sdk.version@"
+path = "./lib/s3-@aws.sdk.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.awssdk"
+artifactId = "aws-xml-protocol"
+version = "@aws.sdk.version@"
+path = "./lib/aws-xml-protocol-@aws.sdk.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.awssdk"
+artifactId = "aws-query-protocol"
+version = "@aws.sdk.version@"
+path = "./lib/aws-query-protocol-@aws.sdk.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.awssdk"
+artifactId = "protocol-core"
+version = "@aws.sdk.version@"
+path = "./lib/protocol-core-@aws.sdk.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.awssdk"
+artifactId = "aws-core"
+version = "@aws.sdk.version@"
+path = "./lib/aws-core-@aws.sdk.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.awssdk"
+artifactId = "auth"
+version = "@aws.sdk.version@"
+path = "./lib/auth-@aws.sdk.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.awssdk"
+artifactId = "sdk-core"
+version = "@aws.sdk.version@"
+path = "./lib/sdk-core-@aws.sdk.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.awssdk"
+artifactId = "regions"
+version = "@aws.sdk.version@"
+path = "./lib/regions-@aws.sdk.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.awssdk"
+artifactId = "profiles"
+version = "@aws.sdk.version@"
+path = "./lib/profiles-@aws.sdk.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.awssdk"
+artifactId = "arns"
+version = "@aws.sdk.version@"
+path = "./lib/arns-@aws.sdk.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.awssdk"
+artifactId = "json-utils"
+version = "@aws.sdk.version@"
+path = "./lib/json-utils-@aws.sdk.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.awssdk"
+artifactId = "third-party-jackson-core"
+version = "@aws.sdk.version@"
+path = "./lib/third-party-jackson-core-@aws.sdk.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.awssdk"
+artifactId = "http-client-spi"
+version = "@aws.sdk.version@"
+path = "./lib/http-client-spi-@aws.sdk.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.awssdk"
+artifactId = "metrics-spi"
+version = "@aws.sdk.version@"
+path = "./lib/metrics-spi-@aws.sdk.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.awssdk"
+artifactId = "utils"
+version = "@aws.sdk.version@"
+path = "./lib/utils-@aws.sdk.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.awssdk"
+artifactId = "annotations"
+version = "@aws.sdk.version@"
+path = "./lib/annotations-@aws.sdk.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.awssdk"
+artifactId = "apache-client"
+version = "@aws.sdk.version@"
+path = "./lib/apache-client-@aws.sdk.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "software.amazon.eventstream"
+artifactId = "eventstream"
+version = "@aws.eventstream.version@"
+path = "./lib/eventstream-@aws.eventstream.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.reactivestreams"
+artifactId = "reactive-streams"
+version = "@reactive.streams.version@"
+path = "./lib/reactive-streams-@reactive.streams.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.apache.httpcomponents"
+artifactId = "httpclient"
+version = "@httpclient.version@"
+path = "./lib/httpclient-@httpclient.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.apache.httpcomponents"
+artifactId = "httpcore"
+version = "@httpcore.version@"
+path = "./lib/httpcore-@httpcore.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "commons-logging"
+artifactId = "commons-logging"
+version = "@commons.logging.version@"
+path = "./lib/commons-logging-@commons.logging.version@.jar"
+
+# RocketMQ storage dependencies
+[[platform.java21.dependency]]
+groupId = "io.debezium"
+artifactId = "debezium-storage-rocketmq"
+version = "@debezium.version@"
+path = "./lib/debezium-storage-rocketmq-@debezium.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.apache.rocketmq"
+artifactId = "rocketmq-client"
+version = "@rocketmq.version@"
+path = "./lib/rocketmq-client-@rocketmq.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.apache.rocketmq"
+artifactId = "rocketmq-tools"
+version = "@rocketmq.version@"
+path = "./lib/rocketmq-tools-@rocketmq.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.apache.rocketmq"
+artifactId = "rocketmq-remoting"
+version = "@rocketmq.version@"
+path = "./lib/rocketmq-remoting-@rocketmq.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.apache.rocketmq"
+artifactId = "rocketmq-common"
+version = "@rocketmq.version@"
+path = "./lib/rocketmq-common-@rocketmq.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.apache.rocketmq"
+artifactId = "rocketmq-acl"
+version = "@rocketmq.version@"
+path = "./lib/rocketmq-acl-@rocketmq.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.apache.rocketmq"
+artifactId = "rocketmq-srvutil"
+version = "@rocketmq.version@"
+path = "./lib/rocketmq-srvutil-@rocketmq.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.apache.rocketmq"
+artifactId = "rocketmq-proto"
+version = "@rocketmq.proto.version@"
+path = "./lib/rocketmq-proto-@rocketmq.proto.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.github.aliyunmq"
+artifactId = "rocketmq-slf4j-api"
+version = "@aliyunmq.version@"
+path = "./lib/rocketmq-slf4j-api-@aliyunmq.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.github.aliyunmq"
+artifactId = "rocketmq-logback-classic"
+version = "@aliyunmq.version@"
+path = "./lib/rocketmq-logback-classic-@aliyunmq.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.github.aliyunmq"
+artifactId = "rocketmq-rocksdb"
+version = "@aliyunmq.rocksdb.version@"
+path = "./lib/rocketmq-rocksdb-@aliyunmq.rocksdb.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.apache.commons"
+artifactId = "commons-lang3"
+version = "@commons.lang3.version@"
+path = "./lib/commons-lang3-@commons.lang3.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "commons-cli"
+artifactId = "commons-cli"
+version = "@commons.cli.version@"
+path = "./lib/commons-cli-@commons.cli.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "commons-validator"
+artifactId = "commons-validator"
+version = "@commons.validator.version@"
+path = "./lib/commons-validator-@commons.validator.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "commons-beanutils"
+artifactId = "commons-beanutils"
+version = "@commons.beanutils.version@"
+path = "./lib/commons-beanutils-@commons.beanutils.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "commons-digester"
+artifactId = "commons-digester"
+version = "@commons.digester.version@"
+path = "./lib/commons-digester-@commons.digester.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "commons-collections"
+artifactId = "commons-collections"
+version = "@commons.collections.version@"
+path = "./lib/commons-collections-@commons.collections.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "com.googlecode.concurrentlinkedhashmap"
+artifactId = "concurrentlinkedhashmap-lru"
+version = "@concurrentlinkedhashmap.version@"
+path = "./lib/concurrentlinkedhashmap-lru-@concurrentlinkedhashmap.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "com.github.luben"
+artifactId = "zstd-jni"
+version = "@zstd.jni.version@"
+path = "./lib/zstd-jni-@zstd.jni.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.lz4"
+artifactId = "lz4-java"
+version = "@lz4.java.version@"
+path = "./lib/lz4-java-@lz4.java.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.grpc"
+artifactId = "grpc-api"
+version = "@grpc.version@"
+path = "./lib/grpc-api-@grpc.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.grpc"
+artifactId = "grpc-context"
+version = "@grpc.version@"
+path = "./lib/grpc-context-@grpc.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.grpc"
+artifactId = "grpc-core"
+version = "@grpc.version@"
+path = "./lib/grpc-core-@grpc.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.grpc"
+artifactId = "grpc-stub"
+version = "@grpc.version@"
+path = "./lib/grpc-stub-@grpc.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.grpc"
+artifactId = "grpc-netty-shaded"
+version = "@grpc.version@"
+path = "./lib/grpc-netty-shaded-@grpc.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "com.google.protobuf"
+artifactId = "protobuf-java"
+version = "@protobuf.java.version@"
+path = "./lib/protobuf-java-@protobuf.java.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "com.google.protobuf"
+artifactId = "protobuf-java-util"
+version = "@protobuf.java.version@"
+path = "./lib/protobuf-java-util-@protobuf.java.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.apache.tomcat"
+artifactId = "annotations-api"
+version = "6.0.53"
+path = "./lib/annotations-api-6.0.53.jar"
+
+[[platform.java21.dependency]]
+groupId = "com.google.guava"
+artifactId = "guava"
+version = "@guava.version@"
+path = "./lib/guava-@guava.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "com.google.guava"
+artifactId = "failureaccess"
+version = "@failureaccess.version@"
+path = "./lib/failureaccess-@failureaccess.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "com.google.code.gson"
+artifactId = "gson"
+version = "@gson.version@"
+path = "./lib/gson-@gson.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.perfmark"
+artifactId = "perfmark-api"
+version = "@perfmark.version@"
+path = "./lib/perfmark-api-@perfmark.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "com.alibaba"
+artifactId = "fastjson"
+version = "@fastjson.version@"
+path = "./lib/fastjson-@fastjson.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-api"
+version = "@opentelemetry.version@"
+path = "./lib/opentelemetry-api-@opentelemetry.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-context"
+version = "@opentelemetry.version@"
+path = "./lib/opentelemetry-context-@opentelemetry.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-sdk"
+version = "@opentelemetry.version@"
+path = "./lib/opentelemetry-sdk-@opentelemetry.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-sdk-common"
+version = "@opentelemetry.version@"
+path = "./lib/opentelemetry-sdk-common-@opentelemetry.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-sdk-trace"
+version = "@opentelemetry.version@"
+path = "./lib/opentelemetry-sdk-trace-@opentelemetry.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-sdk-metrics"
+version = "@opentelemetry.version@"
+path = "./lib/opentelemetry-sdk-metrics-@opentelemetry.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-sdk-logs"
+version = "@opentelemetry.version@"
+path = "./lib/opentelemetry-sdk-logs-@opentelemetry.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-exporter-otlp"
+version = "@opentelemetry.version@"
+path = "./lib/opentelemetry-exporter-otlp-@opentelemetry.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-exporter-otlp-common"
+version = "@opentelemetry.version@"
+path = "./lib/opentelemetry-exporter-otlp-common-@opentelemetry.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-exporter-prometheus"
+version = "@opentelemetry.alpha.version@"
+path = "./lib/opentelemetry-exporter-prometheus-@opentelemetry.alpha.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-exporter-logging"
+version = "@opentelemetry.version@"
+path = "./lib/opentelemetry-exporter-logging-@opentelemetry.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-exporter-logging-otlp"
+version = "@opentelemetry.version@"
+path = "./lib/opentelemetry-exporter-logging-otlp-@opentelemetry.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-exporter-common"
+version = "@opentelemetry.version@"
+path = "./lib/opentelemetry-exporter-common-@opentelemetry.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-exporter-sender-okhttp"
+version = "@opentelemetry.version@"
+path = "./lib/opentelemetry-exporter-sender-okhttp-@opentelemetry.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-sdk-extension-autoconfigure-spi"
+version = "@opentelemetry.version@"
+path = "./lib/opentelemetry-sdk-extension-autoconfigure-spi-@opentelemetry.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-semconv"
+version = "@opentelemetry.alpha.version@"
+path = "./lib/opentelemetry-semconv-@opentelemetry.alpha.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-extension-incubator"
+version = "@opentelemetry.alpha.version@"
+path = "./lib/opentelemetry-extension-incubator-@opentelemetry.alpha.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "io.opentelemetry"
+artifactId = "opentelemetry-api-events"
+version = "@opentelemetry.alpha.version@"
+path = "./lib/opentelemetry-api-events-@opentelemetry.alpha.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "com.squareup.okhttp3"
+artifactId = "okhttp"
+version = "@okhttp.version@"
+path = "./lib/okhttp-@okhttp.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "com.squareup.okio"
+artifactId = "okio-jvm"
+version = "@okio.version@"
+path = "./lib/okio-jvm-@okio.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.jetbrains.kotlin"
+artifactId = "kotlin-stdlib"
+version = "@kotlin.stdlib.version@"
+path = "./lib/kotlin-stdlib-@kotlin.stdlib.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.jetbrains.kotlin"
+artifactId = "kotlin-stdlib-jdk7"
+version = "@kotlin.stdlib.version@"
+path = "./lib/kotlin-stdlib-jdk7-@kotlin.stdlib.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.jetbrains.kotlin"
+artifactId = "kotlin-stdlib-jdk8"
+version = "@kotlin.stdlib.version@"
+path = "./lib/kotlin-stdlib-jdk8-@kotlin.stdlib.version@.jar"
+
+[[platform.java21.dependency]]
+groupId = "org.jetbrains.kotlin"
+artifactId = "kotlin-stdlib-common"
+version = "@kotlin.stdlib.version@"
+path = "./lib/kotlin-stdlib-common-@kotlin.stdlib.version@.jar"

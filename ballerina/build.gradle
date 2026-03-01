@@ -130,6 +130,81 @@ dependencies {
     externalJars(group: 'org.apache.kafka', name: 'kafka-clients', version: kafkaVersion) {
         transitive false
     }
+
+    // RocketMQ storage dependencies
+    externalJars(group: 'io.debezium', name: 'debezium-storage-rocketmq', version: debeziumVersion) {
+        transitive false
+    }
+    externalJars(group: 'org.apache.rocketmq', name: 'rocketmq-client', version: rocketmqVersion) {
+        // Provided by bre/lib
+        exclude group: 'org.slf4j'
+        exclude group: 'commons-codec'
+        exclude group: 'org.yaml', module: 'snakeyaml'
+        // Already in lib/
+        exclude group: 'com.fasterxml.jackson.core'
+        exclude group: 'io.debezium'
+        exclude group: 'org.apache.kafka'
+        // bre/lib + Azure bundle provides individual Netty modules; exclude fat jar
+        exclude group: 'io.netty', module: 'netty-all'
+    }
+    externalJars(group: 'org.apache.rocketmq', name: 'rocketmq-tools', version: rocketmqVersion) {
+        // Provided by bre/lib
+        exclude group: 'org.slf4j'
+        exclude group: 'commons-codec'
+        exclude group: 'org.yaml', module: 'snakeyaml'
+        // Already in lib/
+        exclude group: 'com.fasterxml.jackson.core'
+        exclude group: 'io.debezium'
+        exclude group: 'org.apache.kafka'
+        // bre/lib + Azure bundle provides individual Netty modules; exclude fat jar
+        exclude group: 'io.netty', module: 'netty-all'
+    }
+    externalJars(group: 'com.google.code.gson', name: 'gson', version: gsonVersion) {
+        transitive false
+    }
+
+    // Azure Blob storage dependencies
+    externalJars(group: 'io.debezium', name: 'debezium-storage-azure-blob', version: debeziumVersion) {
+        transitive false
+    }
+    externalJars(group: 'com.azure', name: 'azure-storage-blob', version: azureStorageBlobVersion) {
+        // Provided by bre/lib
+        exclude group: 'io.netty', module: 'netty-buffer'
+        exclude group: 'io.netty', module: 'netty-common'
+        exclude group: 'io.netty', module: 'netty-transport'
+        exclude group: 'io.netty', module: 'netty-resolver'
+        exclude group: 'io.netty', module: 'netty-transport-native-epoll'
+        exclude group: 'io.netty', module: 'netty-transport-native-kqueue'
+        // Platform-native TLS — fall back to JVM TLS (JSSE)
+        exclude group: 'io.netty', module: 'netty-tcnative-boringssl-static'
+        // Platform-specific macOS DNS resolution — JVM default is sufficient
+        exclude group: 'io.netty', module: 'netty-resolver-dns-native-macos'
+        exclude group: 'io.netty', module: 'netty-resolver-dns-classes-macos'
+        // Provided by bre/lib
+        exclude group: 'com.fasterxml.woodstox', module: 'woodstox-core'
+        exclude group: 'org.codehaus.woodstox', module: 'stax2-api'
+        exclude group: 'com.fasterxml.jackson.datatype', module: 'jackson-datatype-jsr310'
+        // Already in lib/
+        exclude group: 'com.fasterxml.jackson.core'
+        exclude group: 'org.reactivestreams', module: 'reactive-streams'
+        exclude group: 'org.slf4j'
+    }
+
+    // S3 storage dependencies
+    externalJars(group: 'io.debezium', name: 'debezium-storage-s3', version: debeziumVersion) {
+        transitive false
+    }
+    externalJars(group: 'software.amazon.awssdk', name: 's3', version: awsSdkVersion) {
+        exclude group: 'org.slf4j'
+        exclude group: 'commons-codec' // provided by bre/lib
+        exclude group: 'software.amazon.awssdk', module: 'apache-client' // packed separately
+        exclude group: 'software.amazon.awssdk', module: 'netty-nio-client' // use apache-client, not Netty async client
+        exclude group: 'io.netty' // no Netty from S3 path
+    }
+    externalJars(group: 'software.amazon.awssdk', name: 'apache-client', version: awsSdkVersion) {
+        exclude group: 'org.slf4j'
+        exclude group: 'commons-codec' // provided by bre/lib
+    }
 }
 
 tasks.register('updateTomlFiles') {
@@ -144,6 +219,47 @@ tasks.register('updateTomlFiles') {
         newBallerinaToml = newBallerinaToml.replace("@smallrye.common.version@", smallryeCommonVersion)
         newBallerinaToml = newBallerinaToml.replace("@commons.pool2.version@", commonsPool2Version)
         newBallerinaToml = newBallerinaToml.replace("@jctools.version@", jctoolsVersion)
+        newBallerinaToml = newBallerinaToml.replace("@azure.storage.blob.version@", azureStorageBlobVersion)
+        newBallerinaToml = newBallerinaToml.replace("@azure.storage.common.version@", azureStorageCommonVersion)
+        newBallerinaToml = newBallerinaToml.replace("@azure.storage.internal.avro.version@", azureStorageInternalAvroVersion)
+        newBallerinaToml = newBallerinaToml.replace("@azure.core.version@", azureCoreVersion)
+        newBallerinaToml = newBallerinaToml.replace("@azure.core.http.netty.version@", azureCoreHttpNettyVersion)
+        newBallerinaToml = newBallerinaToml.replace("@jackson.dataformat.xml.version@", jacksonDataformatXmlVersion)
+        newBallerinaToml = newBallerinaToml.replace("@reactor.core.version@", reactorCoreVersion)
+        newBallerinaToml = newBallerinaToml.replace("@reactor.netty.version@", reactorNettyVersion)
+        newBallerinaToml = newBallerinaToml.replace("@azure.netty.version@", azureNettyVersion)
+        newBallerinaToml = newBallerinaToml.replace("@azure.netty.dns.version@", azureNettyDnsVersion)
+        newBallerinaToml = newBallerinaToml.replace("@aws.sdk.version@", awsSdkVersion)
+        newBallerinaToml = newBallerinaToml.replace("@httpclient.version@", httpclientVersion)
+        newBallerinaToml = newBallerinaToml.replace("@httpcore.version@", httpcoreVersion)
+        newBallerinaToml = newBallerinaToml.replace("@commons.logging.version@", commonsLoggingVersion)
+        newBallerinaToml = newBallerinaToml.replace("@aws.eventstream.version@", awsEventStreamVersion)
+        newBallerinaToml = newBallerinaToml.replace("@reactive.streams.version@", reactiveStreamsVersion)
+        newBallerinaToml = newBallerinaToml.replace("@rocketmq.version@", rocketmqVersion)
+        newBallerinaToml = newBallerinaToml.replace("@rocketmq.proto.version@", rocketmqProtoVersion)
+        newBallerinaToml = newBallerinaToml.replace("@aliyunmq.version@", aliyunmqVersion)
+        newBallerinaToml = newBallerinaToml.replace("@aliyunmq.rocksdb.version@", aliyunmqRocksdbVersion)
+        newBallerinaToml = newBallerinaToml.replace("@commons.lang3.version@", commonsLang3Version)
+        newBallerinaToml = newBallerinaToml.replace("@commons.cli.version@", commonsCliVersion)
+        newBallerinaToml = newBallerinaToml.replace("@commons.validator.version@", commonsValidatorVersion)
+        newBallerinaToml = newBallerinaToml.replace("@commons.beanutils.version@", commonsBeanutilsVersion)
+        newBallerinaToml = newBallerinaToml.replace("@commons.digester.version@", commonsDigesterVersion)
+        newBallerinaToml = newBallerinaToml.replace("@commons.collections.version@", commonsCollectionsVersion)
+        newBallerinaToml = newBallerinaToml.replace("@concurrentlinkedhashmap.version@", concurrentlinkedhashmapVersion)
+        newBallerinaToml = newBallerinaToml.replace("@zstd.jni.version@", zstdJniVersion)
+        newBallerinaToml = newBallerinaToml.replace("@lz4.java.version@", lz4JavaVersion)
+        newBallerinaToml = newBallerinaToml.replace("@grpc.version@", grpcVersion)
+        newBallerinaToml = newBallerinaToml.replace("@protobuf.java.version@", protobufJavaVersion)
+        newBallerinaToml = newBallerinaToml.replace("@guava.version@", guavaVersion)
+        newBallerinaToml = newBallerinaToml.replace("@failureaccess.version@", failureaccessVersion)
+        newBallerinaToml = newBallerinaToml.replace("@gson.version@", gsonVersion)
+        newBallerinaToml = newBallerinaToml.replace("@perfmark.version@", perfmarkVersion)
+        newBallerinaToml = newBallerinaToml.replace("@fastjson.version@", fastjsonVersion)
+        newBallerinaToml = newBallerinaToml.replace("@opentelemetry.version@", opentelemetryVersion)
+        newBallerinaToml = newBallerinaToml.replace("@opentelemetry.alpha.version@", opentelemetryAlphaVersion)
+        newBallerinaToml = newBallerinaToml.replace("@okhttp.version@", okhttpVersion)
+        newBallerinaToml = newBallerinaToml.replace("@okio.version@", okioVersion)
+        newBallerinaToml = newBallerinaToml.replace("@kotlin.stdlib.version@", kotlinStdlibVersion)
         ballerinaTomlFile.text = newBallerinaToml
 
         def newCompilerPluginToml = compilerPluginTomlFilePlaceHolder.text.replace("@project.version@", project.version)
